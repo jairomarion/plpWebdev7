@@ -1,0 +1,34 @@
+/* Part 1: Transitions for smooth color change */
+#colorBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: steelblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#colorBtn:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+/* Box styling */
+#box {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    margin-top: 20px;
+}
+
+/* Part 1: Keyframe animation */
+@keyframes slideAndFade {
+    0% { transform: translateX(0); opacity: 1; }
+    50% { transform: translateX(200px); opacity: 0.5; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Class to trigger animation */
+.animate {
+    animation: slideAndFade 1.5s ease forwards;
+}
